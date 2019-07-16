@@ -1,0 +1,97 @@
+html {
+    font-family: Futura;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    background-image: linear-gradient( 135deg, #FAD7A1 10%, #33cc33 100%);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+body {
+    margin: 0;
+}
+
+
+/* .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f9fa;
+    color: black;
+    grid-template-columns: 0.9fr 1fr 0.9fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1px;
+    grid-template-areas: "gitlink networks copyrights";
+} */
+
+.footer {
+    font-size: x-small;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    height: 6em;
+    width: 100%;
+    grid-area: footer;
+    background-color: #EEEEEF;
+    border-style: solid;
+    border-width: 0px;
+    display: grid;
+    grid-template-columns: 0.9fr 1fr 0.9fr;
+    grid-template-rows: 1fr;
+    grid-gap: 1px;
+    grid-template-areas: "gitlink networks copyrights";
+}
+
+.gitlink {
+    grid-area: gitlink;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-left: 20px;
+}
+
+.github_link {
+    color: black;
+    text-decoration: none;
+    margin-left: 3px;
+    font-weight: bold;
+}
+
+.github_link:hover {
+    color: #67676F;
+    text-decoration: underline;
+}
+
+.networks {
+    grid-area: networks;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 40px 0 40px;
+}
+
+.networks:hover .net-logo {
+    transform: scale(1.4);
+}
+
+.net-logo {
+    width: 15px;
+    height: 15px;
+    transition: transform .2s;
+}
+
+.net-logo:hover {
+    background-image: linear-gradient( 135deg, #FCCF31 10%, #F55555 100%);
+    transform: scale(1.8) !important;
+}
+
+.copyrights {
+    grid-area: copyrights;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 20px;
+}
