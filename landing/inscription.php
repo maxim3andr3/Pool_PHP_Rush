@@ -6,7 +6,8 @@
         $username = $_POST['username'];
         $email = $_POST['email'];
         $password = $_POST['password'];
-        $password_confirmation = $_POST['password_confirmation'];
+		$password_confirmation = $_POST['password_confirmation'];
+
         if (!$username || !$email || filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false || !$password || !$password_confirmation || $password != $password_confirmation)
         {
             if (empty($username))
@@ -27,8 +28,9 @@
 				'password' => password_hash($password, PASSWORD_DEFAULT)
 			);
 			$query->execute($array);
-            echo '<p>User created</p>';
-        }
+			echo '<p>User created</p>';
+			header('refresh:3; url=login.php');
+		}
     }
 ?>
 
