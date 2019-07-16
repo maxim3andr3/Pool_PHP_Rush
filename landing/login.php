@@ -5,7 +5,6 @@
 	<link rel="stylesheet" href="../stylesheets/" />
 	<title>Login</title>
 </head>
-<body>
 
 </body>
 </html>
