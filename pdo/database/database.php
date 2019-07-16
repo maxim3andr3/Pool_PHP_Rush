@@ -74,6 +74,12 @@
             return 'SELECT * FROM users WHERE id = :id';
         }
 
+        // Query to display a member by his email
+        function selectMemberEmail()
+        {
+            return 'SELECT * FROM users WHERE email = :email';
+        }
+
         // Query to edit a member by his id
         function updateMemberId()
         {
